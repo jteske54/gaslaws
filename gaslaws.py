@@ -120,23 +120,7 @@ def volumeTemperatureTemperature():
     clear()
     print("Unknown Temperature")
     V1 = float(input("V1= "))
-    T1t = float(input("T1= "))
-    print("""
-    1. Kelvin
-    2. Celsius
-    3. Fahrenheit
-    """)
-    tempChoice = int(input("What are the units for T1? "))
-    if tempChoice == 1:
-        T1 = tempconv.xkelvin(T1t)
-    elif tempChoice == 2:
-        T1 = tempconv.xcelcius(T1t)
-    elif tempChoice == 3:
-        T1 = tempconv.xfahrenheit(T1t)
-    else:
-        incorrect()
-        input()
-        volumeTemperatureTemperature()
+    T1 = tempconv.tempConvChoose()
     V2 = float(input("V2= "))
     T2 = V2 / (V1 / T1)
     tempconv.xkelvin(T2)
@@ -147,40 +131,8 @@ def volumeTemperatureVolume():
     clear()
     print("Unknown Volume")
     V1 = float(input("V1= "))
-    T1t = float(input("T1= "))
-    print("""
-        1. Kelvin
-        2. Celsius
-        3. Fahrenheit
-        """)
-    tempChoice = int(input("What are the units for T1? "))
-    if tempChoice == 1:
-        T1 = tempconv.xkelvin(T1t)
-    elif tempChoice == 2:
-        T1 = tempconv.xcelcius(T1t)
-    elif tempChoice == 3:
-        T1 = tempconv.xfahrenheit(T1t)
-    else:
-        incorrect()
-        input()
-        volumeTemperatureVolume()
-    T2t = float(input("T2= "))
-    print("""
-        1. Kelvin
-        2. Celsius
-        3. Fahrenheit
-        """)
-    tempChoice = int(input("What are the units for T2? "))
-    if tempChoice == 1:
-        T2 = tempconv.xkelvin(T2t)
-    elif tempChoice == 2:
-        T2 = tempconv.xcelcius(T2t)
-    elif tempChoice == 3:
-        T2 = tempconv.xfahrenheit(T2t)
-    else:
-        incorrect()
-        input()
-        volumeTemperatureVolume()
+    T1 = tempconv.tempConvChoose()
+    T2 = tempconv.tempConvChoose()
     V2 = (V1 / T1) * T2
     print("V2= " + str(V2))
     xagain()
