@@ -7,10 +7,10 @@ def incorrect():
 
 def tempConvChoose():
     print("""
-    1. Kelvin
-    2. Celsius
-    3. Fahrenheit
-    """)
+1. Kelvin
+2. Celsius
+3. Fahrenheit
+""")
     tempChoice = int(input("What would you like to convert? "))
     if tempChoice == 1:
         k = kelvin()
