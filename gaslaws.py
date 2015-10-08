@@ -1,6 +1,6 @@
 __author__ = 'jteske13'
 
-import tempconv
+import tempconv, rvalue, math
 
 
 def incorrect():
@@ -218,16 +218,137 @@ def volumeNN():
 	xagain()
 
 
-#def pressureVolumeTemperature():
+def pressureVolumeTemperature():
+	print("Pressure, Volume, and Temperature")
+	print()
+	print("""
+Unknown:
+
+1. Pressure
+2. Volume
+3. Temperature
+""")
+	z = choice()
+	if z == 1:
+		pressureVolumeTemperaturePressure()
+	elif z == 2:
+		pressureVolumeTemperatureVolume()
+	elif z == 3:
+		pressureVolumeTemperatureTemperature()
+	else:
+		incorrect()
+		volumeTemperature()
 
 
+def pressureVolumeTemperaturePressure():
+	print("Unknown Pressure")
+	P1 = float(input("P1= "))
+	V1 = float(input("V1= "))
+	T1 = tempconv.tempConvChoose("T1")
+	V2 = float(input("V2= "))
+	T2 = tempconv.tempConvChoose("T2")
+	P2 = (((P1 * V1) / T1) * T2) / V2
+	print("P2 =" + str(P2))
+	xagain()
 
-#def PVEqualsNRT():
+def pressureVolumeTemperatureVolume():
+	print("Unknown Volume")
+	P1 = float(input("P1= "))
+	V1 = float(input("V1= "))
+	T1 = tempconv.tempConvChoose("T1")
+	P2 = float(input("P2= "))
+	T2 = tempconv.tempConvChoose("T2")
+	V2 = (((P1 * V1) / T1) * T2) / P2
+	print("V2 =" + str(V2))
+	xagain()
 
 
+def pressureVolumeTemperatureTemperature():
+	print("Unknown Temperature")
+	P1 = float(input("P1= "))
+	V1 = float(input("V1= "))
+	T1 = tempconv.tempConvChoose("T1")
+	P2 = float(input("P2= "))
+	V2 = tempconv.tempConvChoose("T2")
+	T2 = (P2 * V2) / ((P1 * V1) / T1)
+	tempconv.xkelvin(T2)
+	xagain()
 
-#def rateMass():
 
+def PVEqualsNRT():
+	print("PV=nRT")
+	print()
+	print("""
+Unknown:
+
+1. Pressure
+2. Volume
+3. Moles
+4. Temperature
+""")
+	z = choice()
+	if z == 1:
+		PVEqualsNRTPressure()
+	elif z == 2:
+		PVEqualsNRTVolume()
+	elif z == 3:
+		PVEqualsNRTMoles()
+	elif z == 4:
+		PVEqualsNRTTemperature()
+	else:
+		incorrect()
+		volumeTemperature()
+
+
+def PVEqualsNRTPressure():
+	print("Unknown Pressure")
+	V = float(input("V= "))
+	n = float(input("n= "))
+	R = rvalue.menu()
+	T = tempconv.tempConvChoose("T")
+	P = (n * R * T) / V
+	print("P= " + str(P))
+	xagain()
+
+
+def PVEqualsNRTVolume():
+	print("Unknown Volume")
+	P = float(input("P= "))
+	n = float(input("n= "))
+	R = rvalue.menu()
+	T = tempconv.tempConvChoose("T")
+	V = (n * R * T) / P
+	print("V= " + str(V))
+	xagain()
+
+
+def PVEqualsNRTMoles():
+	print("Unknown Moles")
+	P = float(input("P= "))
+	V = float(input("V= "))
+	R = rvalue.menu()
+	T = tempconv.tempConvChoose("T")
+	n = (P * V) / (R * T)
+	print("n= " + str(n))
+	xagain()
+
+def PVEqualsNRTTemperature():
+	print("Unknown Temperature")
+	P = float(input("P= "))
+	V = float(input("V= "))
+	n = float(input("n= "))
+	R = rvalue.menu()
+	T = (P * V) / (n * R)
+	tempconv.xkelvin(T)
+	xagain()
+
+def rateMass():
+	print("Rate and Mass")
+	denser = float(input("A (Denser)= "))
+	lessdense = float(input("B (Less dense= "))
+	ans = sqrt(denser / lessdense)
+	print(str(ans))
+	xagain()
 
 
 def main():
