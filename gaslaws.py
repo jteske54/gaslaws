@@ -123,7 +123,7 @@ Unknown:
 def volumeTemperatureTemperature():
 	print("Unknown Temperature")
 	V1 = float(input("V1= "))
-	T1 = tempconv.tempConvChoose()
+	T1 = tempconv.tempConvChoose("T1")
 	V2 = float(input("V2= "))
 	T2 = V2 / (V1 / T1)
 	tempconv.xkelvin(T2)
@@ -133,26 +133,101 @@ def volumeTemperatureTemperature():
 def volumeTemperatureVolume():
 	print("Unknown Volume")
 	V1 = float(input("V1= "))
-	T1 = tempconv.tempConvChoose()
-	T2 = tempconv.tempConvChoose()
+	T1 = tempconv.tempConvChoose("T1")
+	T2 = tempconv.tempConvChoose("T2")
 	V2 = (V1 / T1) * T2
 	print("V2= " + str(V2))
 	xagain()
 
 
-# def pressureTemperature():
+def pressureTemperature():
+	print("Pressure and Temperature")
+	print()
+	print("""
+Unknown:
+
+1. Pressure
+2. Temperature
+""")
+	z = choice()
+	if z == 1:
+		pressureTemperaturePressure()
+	elif z == 2:
+		pressureTemperatureTemperature()
+	else:
+		incorrect()
+		volumeTemperature()
 
 
-# def volumeN():
+def pressureTemperaturePressure():
+	print("Unknown Pressure")
+	P1 = float(input("P1 = "))
+	T1 = tempconv.tempConvChoose("T1")
+	T2 = tempconv.tempConvChoose("T2")
+	P2 = (P1 / T1) * T2
+	print("P2= " + str(P2))
+	xagain()
 
 
-# def pressureVolumeTemperature():
+def pressureTemperatureTemperature():
+	print("Unknown Temperature")
+	P1 = float(input("P1= "))
+	T1 = tempconv.tempConvChoose("T1")
+	P2 = float(input("P2= "))
+	T2 = P2 / (P1 / T1)
+	tempconv.xkelvin(T2)
+	xagain()
 
 
-# def PVEqualsNRT():
+def volumeN():
+	print("Volume and n")
+	print()
+	print("""
+Unknown:
+
+1. Volume
+2. n
+""")
+	z = choice()
+	if z == 1:
+		volumeNVolume()
+	elif z == 2:
+		volumeNN()
+	else:
+		incorrect()
+		volumeTemperature()
 
 
-# def rateMass():
+def volumeNVolume():
+	print("Unknown Volume")
+	V1 = float(input("V1= "))
+	n1 = float(input("n1= "))
+	n2 = float(input("n2= "))
+	V2 = (V1 / n1) * n2
+	print("V2= " + str(V2))
+	xagain()
+
+
+def volumeNN():
+	print("Unknown n")
+	V1 = float(input("V1= "))
+	n1 = float(input("n1= "))
+	V2 = float(input("V2= "))
+	n2 = V2 / (V1 / n1)
+	print("n2= " + str(n2))
+	xagain()
+
+
+#def pressureVolumeTemperature():
+
+
+
+#def PVEqualsNRT():
+
+
+
+#def rateMass():
+
 
 
 def main():

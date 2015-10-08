@@ -5,21 +5,21 @@ def incorrect():
     print("You have selected an incorrect number. Please select again.")
 
 
-def tempConvChoose():
+def tempConvChoose(temp):
     print("""
 1. Kelvin
 2. Celsius
 3. Fahrenheit
 """)
-    tempChoice = int(input("What would you like to convert? "))
+    tempChoice = int(input("Please enter the unit of temperature for " + temp + ":"))
     if tempChoice == 1:
-        k = kelvin()
+        k = kelvin(temp)
         return k
     elif tempChoice == 2:
-        k = celcius()
+        k = celcius(temp)
         return k
     elif tempChoice == 3:
-        k = fahrenheit()
+        k = fahrenheit(temp)
         return k
     else:
         incorrect()
@@ -27,33 +27,33 @@ def tempConvChoose():
         tempConvChoose()
 
 
-def kelvin():
-    k = float(input("K= "))
+def kelvin(temp):
+    k = float(input(temp + "K= "))
     c = k - 273
     f = (c * 1.8) + 32
-    print("K= " + str(k))
-    print("ºC= " + str(c))
-    print("ºF= " + str(f))
+    print(temp + " K= " + str(k))
+    print(temp + " ºC= " + str(c))
+    print(temp + " ºF= " + str(f))
     return k
 
 
-def celcius():
-    c = float(input("ºC= "))
+def celcius(temp):
+    c = float(input(temp + "ºC= "))
     k = c + 273
     f = (c * 1.8) + 32
-    print("K= " + str(k))
-    print("ºC= " + str(c))
-    print("ºF= " + str(f))
+    print(temp + " K= " + str(k))
+    print(temp + " ºC= " + str(c))
+    print(temp + " ºF= " + str(f))
     return k
 
 
-def fahrenheit():
-    f = float(input("ºF= "))
+def fahrenheit(temp):
+    f = float(input(temp + "ºF= "))
     c = (f - 32) / 1.8
     k = c + 273
-    print("K= " + str(k))
-    print("ºC= " + str(c))
-    print("ºF= " + str(f))
+    print(temp + " K= " + str(k))
+    print(temp + " ºC= " + str(c))
+    print(temp + " ºF= " + str(f))
     return k
 
 
