@@ -28,7 +28,7 @@ def tempConvChoose(temp):
 
 
 def kelvin(temp):
-    k = float(input(temp + "K= "))
+    k = float(input(temp + " K= "))
     c = k - 273
     f = (c * 1.8) + 32
     print(temp + " K= " + str(k))
@@ -38,7 +38,7 @@ def kelvin(temp):
 
 
 def celcius(temp):
-    c = float(input(temp + "ºC= "))
+    c = float(input(temp + " ºC= "))
     k = c + 273
     f = (c * 1.8) + 32
     print(temp + " K= " + str(k))
@@ -48,7 +48,7 @@ def celcius(temp):
 
 
 def fahrenheit(temp):
-    f = float(input(temp + "ºF= "))
+    f = float(input(temp + " ºF= "))
     c = (f - 32) / 1.8
     k = c + 273
     print(temp + " K= " + str(k))
