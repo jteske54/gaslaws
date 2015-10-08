@@ -31,7 +31,6 @@ def kelvin(temp):
     k = float(input(temp + " K= "))
     c = k - 273
     f = (c * 1.8) + 32
-    print(temp + " K= " + str(k))
     print(temp + " ºC= " + str(c))
     print(temp + " ºF= " + str(f))
     return k
@@ -42,7 +41,6 @@ def celcius(temp):
     k = c + 273
     f = (c * 1.8) + 32
     print(temp + " K= " + str(k))
-    print(temp + " ºC= " + str(c))
     print(temp + " ºF= " + str(f))
     return k
 
@@ -53,7 +51,6 @@ def fahrenheit(temp):
     k = c + 273
     print(temp + " K= " + str(k))
     print(temp + " ºC= " + str(c))
-    print(temp + " ºF= " + str(f))
     return k
 
 
