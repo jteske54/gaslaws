@@ -3,6 +3,12 @@ __author__ = 'jteske13'
 import tempconv, rvalue, math
 
 
+def space():
+	print()
+	print()
+	print()
+
+
 def incorrect():
 	print("You have selected an incorrect number. Please select again.")
 
@@ -18,6 +24,7 @@ def xagain():
 
 def menu():
 	while True:
+		space()
 		print("""
 Gas Law Conversions
 
@@ -59,6 +66,7 @@ Gas Law Conversions
 
 
 def pressureVolume():
+	space()
 	print("""
 Pressure and Volume
 
@@ -80,6 +88,7 @@ Unknown:
 
 
 def pressureVolumePressure():
+	space()
 	print("Unknown Pressure")
 	P1 = float(input("P1= "))
 	V1 = float(input("V1= "))
@@ -91,6 +100,7 @@ def pressureVolumePressure():
 
 
 def pressureVolumeVolume():
+	space()
 	print("Unknown Volume")
 	P1 = float(input("P1= "))
 	V1 = float(input("V1= "))
@@ -102,6 +112,7 @@ def pressureVolumeVolume():
 
 
 def volumeTemperature():
+	space()
 	print("Volume and Temperature")
 	print()
 	print("""
@@ -121,6 +132,7 @@ Unknown:
 
 
 def volumeTemperatureTemperature():
+	space()
 	print("Unknown Temperature")
 	V1 = float(input("V1= "))
 	T1 = tempconv.tempConvChoose("T1")
@@ -131,6 +143,7 @@ def volumeTemperatureTemperature():
 
 
 def volumeTemperatureVolume():
+	space()
 	print("Unknown Volume")
 	V1 = float(input("V1= "))
 	T1 = tempconv.tempConvChoose("T1")
@@ -141,6 +154,7 @@ def volumeTemperatureVolume():
 
 
 def pressureTemperature():
+	space()
 	print("Pressure and Temperature")
 	print()
 	print("""
@@ -160,6 +174,7 @@ Unknown:
 
 
 def pressureTemperaturePressure():
+	space()
 	print("Unknown Pressure")
 	P1 = float(input("P1 = "))
 	T1 = tempconv.tempConvChoose("T1")
@@ -170,6 +185,7 @@ def pressureTemperaturePressure():
 
 
 def pressureTemperatureTemperature():
+	space()
 	print("Unknown Temperature")
 	P1 = float(input("P1= "))
 	T1 = tempconv.tempConvChoose("T1")
@@ -180,6 +196,7 @@ def pressureTemperatureTemperature():
 
 
 def volumeN():
+	space()
 	print("Volume and n")
 	print()
 	print("""
@@ -199,6 +216,7 @@ Unknown:
 
 
 def volumeNVolume():
+	space()
 	print("Unknown Volume")
 	V1 = float(input("V1= "))
 	n1 = float(input("n1= "))
@@ -209,6 +227,7 @@ def volumeNVolume():
 
 
 def volumeNN():
+	space()
 	print("Unknown n")
 	V1 = float(input("V1= "))
 	n1 = float(input("n1= "))
@@ -219,6 +238,7 @@ def volumeNN():
 
 
 def pressureVolumeTemperature():
+	space()
 	print("Pressure, Volume, and Temperature")
 	print()
 	print("""
@@ -241,6 +261,7 @@ Unknown:
 
 
 def pressureVolumeTemperaturePressure():
+	space()
 	print("Unknown Pressure")
 	P1 = float(input("P1= "))
 	V1 = float(input("V1= "))
@@ -252,6 +273,7 @@ def pressureVolumeTemperaturePressure():
 	xagain()
 
 def pressureVolumeTemperatureVolume():
+	space()
 	print("Unknown Volume")
 	P1 = float(input("P1= "))
 	V1 = float(input("V1= "))
@@ -264,6 +286,7 @@ def pressureVolumeTemperatureVolume():
 
 
 def pressureVolumeTemperatureTemperature():
+	space()
 	print("Unknown Temperature")
 	P1 = float(input("P1= "))
 	V1 = float(input("V1= "))
@@ -276,6 +299,7 @@ def pressureVolumeTemperatureTemperature():
 
 
 def PVEqualsNRT():
+	space()
 	print("PV=nRT")
 	print()
 	print("""
@@ -301,6 +325,7 @@ Unknown:
 
 
 def PVEqualsNRTPressure():
+	space()
 	print("Unknown Pressure")
 	V = float(input("V= "))
 	n = float(input("n= "))
@@ -312,6 +337,7 @@ def PVEqualsNRTPressure():
 
 
 def PVEqualsNRTVolume():
+	space()
 	print("Unknown Volume")
 	P = float(input("P= "))
 	n = float(input("n= "))
@@ -323,6 +349,7 @@ def PVEqualsNRTVolume():
 
 
 def PVEqualsNRTMoles():
+	space()
 	print("Unknown Moles")
 	P = float(input("P= "))
 	V = float(input("V= "))
@@ -333,6 +360,7 @@ def PVEqualsNRTMoles():
 	xagain()
 
 def PVEqualsNRTTemperature():
+	space()
 	print("Unknown Temperature")
 	P = float(input("P= "))
 	V = float(input("V= "))
@@ -343,6 +371,7 @@ def PVEqualsNRTTemperature():
 	xagain()
 
 def rateMass():
+	space()
 	print("Rate and Mass")
 	denser = float(input("A (Denser)= "))
 	lessdense = float(input("B (Less dense= "))
