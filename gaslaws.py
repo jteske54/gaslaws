@@ -1,6 +1,7 @@
 __author__ = 'jteske13'
 
-import tempconv, rvalue, math
+from math import *
+import tempconv, rvalue
 
 
 def space():
